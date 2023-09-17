@@ -1,0 +1,40 @@
+.container {
+  width: 27.375rem;
+  height: 20.6875rem;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  filter: drop-shadow(0px 2px 14px rgba(42, 42, 42, 0.24));
+  padding: 2.25rem 1.5rem 4rem 1.5rem;
+  margin: 2rem 0.01rem;
+  border-radius: 0.5rem;
+}
+
+.container h3 {
+  color: #2a2a2a;
+  font-family: Serif;
+  font-family: IBM Plex Serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.container p:nth-child(2) {
+  color: #2A2A2A;
+  font-size: 0.9375rem;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.container p:nth-child(3) {
+  color: #2A2A2A;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  margin-right: 10rem;
+}
+
+.container img {
+  margin-top: 1rem;
+  margin-left: 95%;
+}

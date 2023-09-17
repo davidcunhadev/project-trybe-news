@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: 2.5rem;
+  margin: 1.5rem 13rem 0.5rem 12rem;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1.25rem 1.25rem 1.25rem 1rem;
+}
+
+.container a {
+  text-decoration: none;
+  color: #2A2A2A;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 600;
+}

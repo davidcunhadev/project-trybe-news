@@ -1,0 +1,27 @@
+.container {
+  height: 100vh;
+  background-color: rgba(42, 42, 42, 0.24);
+  display: flex;
+  gap: 3rem;
+  align-items:center
+}
+
+.container h1 {
+  color: #2a2a2a;
+  font-size: 122.263px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 125px;
+  margin-left: 35%;
+}
+
+.container h3 {
+  color: black;
+  font-size: 36.678px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 40px;
+  width: 300px;
+}
