@@ -1,26 +1,37 @@
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
 import Card from '../../Components/Card/Card';
-import Header from '../../Components/Header/Header';
-import MainCard from '../../Components/MainCard/MainCard';
-import NavBar from '../../Components/NavBar/NavBar';
 import styles from './Home.module.css';
+import NewsContext from '../../Context/NewsContext';
 
 function Home() {
-  // const location = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { newsResults, handleFavoriteNews } = useContext(NewsContext);
+
+  const getThreeLatestNews = newsResults.slice(1, 4);
+
   return (
-    <main>
-      <Header />
-      <MainCard />
-      <NavBar />
-      <div className={ styles.cardsGrid }>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
-      <button className={ styles.button }>MAIS NOTÍCIAS</button>
-    </main>
+    location.pathname === '/' && (
+      <section>
+        <div className={ styles.cardsGrid }>
+          {getThreeLatestNews.map((item) => (
+            <Card
+              handleFavoriteNews={ handleFavoriteNews }
+              key={ item.id }
+              news={ item }
+            />
+          ))}
+        </div>
+        <button
+          onClick={ () => navigate('/release') }
+          className={ styles.button }
+        >
+          MAIS NOTÍCIAS
+
+        </button>
+      </section>
+    )
   );
 }
 

@@ -1,19 +1,28 @@
+import { useContext } from 'react';
+import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 import Button from '../Button/Button';
 import styles from './Card.module.css';
-import favIcon from '../../assets/favIcon.svg';
+import { CardProps } from '../../types';
+import { publicationDate } from '../Helpers/TransformDate';
+import NewsContext from '../../Context/NewsContext';
 
-function Card() {
+function Card({ news, handleFavoriteNews }: CardProps) {
+  const { favorites } = useContext(NewsContext);
   return (
     <div className={ styles.container }>
-      <h3>Taxa de sindicalização cai a 9,2% em 2022, menor nível da série</h3>
+      <h3>{news.titulo}</h3>
       <p className={ styles.description }>
-        Em 2022, menos de 10% dos trabalhadores eram sindicalizados, chegando ao menor
-        contingente da série iniciada em 2012 - Foto: Rovena Rosa/Agência Brasil Em 2022,
-        das 99,6 milhões de pessoas ocupadas, 9,2% (9,1 milhões de pessoas) eram associada
+        {news.introducao}
       </p>
-      <p>1 dia atrás</p>
-      <Button />
-      <img src={ favIcon } alt="Favorite News" />
+      <p>{publicationDate(news.data_publicacao)}</p>
+      <Button href={ news.link } />
+      <button onClick={ () => handleFavoriteNews(news) }>
+        {favorites.some((fav) => fav.id === news.id) ? (
+          <MdFavorite />
+        ) : (
+          <MdFavoriteBorder />
+        )}
+      </button>
     </div>
   );
 }

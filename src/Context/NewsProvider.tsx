@@ -1,10 +1,81 @@
-import { NewsProviderType } from '../types';
+import { useState, useEffect } from 'react';
+import { ItemsType, NewsProviderType } from '../types';
 import NewsContext from './NewsContext';
 
 function NewsProvider({ children }: NewsProviderType) {
-  const context = {
-    // feuncoes aq
+  const [newsResults, setNewsResults] = useState<ItemsType[]>([]);
+  const [releaseResults, setReleaseResults] = useState<ItemsType[]>([]);
+  const [loadingNews, setLoadingNews] = useState(false);
+  const [favorites, setFavorites] = useState<ItemsType[]>([]);
+
+  const handleFavoriteNews = (news: ItemsType) => {
+    const alreadyFavorited = favorites.some((fav) => fav.id === news.id);
+    if (alreadyFavorited) {
+      const filteredFavorites = favorites.filter((fav) => fav.id !== news.id);
+      setFavorites(filteredFavorites);
+    }
+    if (!alreadyFavorited) {
+      setFavorites([...favorites, news]);
+    }
   };
+
+  useEffect(() => {
+    const alreadyFavorites = () => {
+      const hasFavorites = localStorage.getItem('favorites');
+      const favorited = hasFavorites && JSON.parse(hasFavorites);
+      setFavorites(favorited);
+    };
+    alreadyFavorites();
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        setLoadingNews(true);
+        const API_URL = 'https://servicodados.ibge.gov.br/api/v3/noticias/?tipo=noticia&qtd=100';
+        const response = await fetch(API_URL);
+        if (response.ok) {
+          const data = await response.json();
+          setNewsResults(data.items);
+        }
+        setLoadingNews(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchNews();
+  }, []);
+
+  useEffect(() => {
+    const fetchRelease = async () => {
+      try {
+        setLoadingNews(true);
+        const API_URL = 'https://servicodados.ibge.gov.br/api/v3/noticias/?tipo=release&qtd=100';
+        const response = await fetch(API_URL);
+        if (response.ok) {
+          const data = await response.json();
+          setReleaseResults(data.items);
+        }
+        setLoadingNews(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchRelease();
+  }, []);
+
+  const context = {
+    newsResults,
+    loadingNews,
+    releaseResults,
+    handleFavoriteNews,
+    favorites,
+  };
+
   return (
     <NewsContext.Provider value={ context }>
       {children}

@@ -1,9 +1,13 @@
 import styles from './Button.module.css';
 
-function Button() {
+type ButtonProps = {
+  href: string
+};
+
+function Button({ href }:ButtonProps) {
   return (
     <button className={ styles.button }>
-      Leia a notícia aqui
+      <a target="_blank" href={ href } rel="noreferrer">Leia a notícia aqui</a>
     </button>
   );
 }
