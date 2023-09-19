@@ -9,7 +9,7 @@ import NewsContext from '../../Context/NewsContext';
 function Card({ news, handleFavoriteNews }: CardProps) {
   const { favorites } = useContext(NewsContext);
   return (
-    <div className={ styles.container }>
+    <article className={ styles.container }>
       <h3>{news.titulo}</h3>
       <p className={ styles.description }>
         {news.introducao}
@@ -23,7 +23,7 @@ function Card({ news, handleFavoriteNews }: CardProps) {
           <MdFavoriteBorder />
         )}
       </button>
-    </div>
+    </article>
   );
 }
 

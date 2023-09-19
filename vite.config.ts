@@ -14,7 +14,9 @@ export default defineConfig({
     reporters: ['verbose'],
     coverage: {
       reporter: ['text', 'json', 'html'],
-      provider: 'v8'
-    }
+      include: ['src/*/'],
+      exclude: ['src/main.tsx', 'src/fakes', 'src/routes', 'src/tests'],
+      provider: 'v8',
+    },
   },
 })

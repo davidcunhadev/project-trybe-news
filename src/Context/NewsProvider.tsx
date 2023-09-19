@@ -5,7 +5,6 @@ import NewsContext from './NewsContext';
 function NewsProvider({ children }: NewsProviderType) {
   const [newsResults, setNewsResults] = useState<ItemsType[]>([]);
   const [releaseResults, setReleaseResults] = useState<ItemsType[]>([]);
-  const [loadingNews, setLoadingNews] = useState(false);
   const [favorites, setFavorites] = useState<ItemsType[]>([]);
 
   const handleFavoriteNews = (news: ItemsType) => {
@@ -35,14 +34,12 @@ function NewsProvider({ children }: NewsProviderType) {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        setLoadingNews(true);
         const API_URL = 'https://servicodados.ibge.gov.br/api/v3/noticias/?tipo=noticia&qtd=100';
         const response = await fetch(API_URL);
         if (response.ok) {
           const data = await response.json();
           setNewsResults(data.items);
         }
-        setLoadingNews(false);
       } catch (error) {
         console.log(error);
       }
@@ -53,14 +50,12 @@ function NewsProvider({ children }: NewsProviderType) {
   useEffect(() => {
     const fetchRelease = async () => {
       try {
-        setLoadingNews(true);
         const API_URL = 'https://servicodados.ibge.gov.br/api/v3/noticias/?tipo=release&qtd=100';
         const response = await fetch(API_URL);
         if (response.ok) {
           const data = await response.json();
           setReleaseResults(data.items);
         }
-        setLoadingNews(false);
       } catch (error) {
         console.log(error);
       }
@@ -70,7 +65,6 @@ function NewsProvider({ children }: NewsProviderType) {
 
   const context = {
     newsResults,
-    loadingNews,
     releaseResults,
     handleFavoriteNews,
     favorites,

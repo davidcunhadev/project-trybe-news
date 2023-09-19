@@ -1,6 +1,5 @@
 export type ContextType = {
   newsResults: ItemsType[],
-  loadingNews: boolean,
   releaseResults: ItemsType[]
   handleFavoriteNews: (news: ItemsType) => void
   favorites: ItemsType[]
