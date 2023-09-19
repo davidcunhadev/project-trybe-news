@@ -3,7 +3,7 @@ import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 import Button from '../Button/Button';
 import styles from './LatestNewsCard.module.css';
 import NewsContext from '../../Context/NewsContext';
-import { publicationDate } from '../Helpers/TransformDate';
+import { publicationDate } from '../../Helpers/TransformDate';
 
 function LatestNewsCard() {
   const { newsResults, handleFavoriteNews, favorites } = useContext(NewsContext);

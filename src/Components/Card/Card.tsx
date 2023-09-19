@@ -3,7 +3,7 @@ import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 import Button from '../Button/Button';
 import styles from './Card.module.css';
 import { CardProps } from '../../types';
-import { publicationDate } from '../Helpers/TransformDate';
+import { publicationDate } from '../../Helpers/TransformDate';
 import NewsContext from '../../Context/NewsContext';
 
 function Card({ news, handleFavoriteNews }: CardProps) {

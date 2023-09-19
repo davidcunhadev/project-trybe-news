@@ -8,6 +8,7 @@
 
 .container h1 {
   color: #2a2a2a;
+  font-family: Poppins;
   font-size: 122.263px;
   font-style: normal;
   font-weight: 400;
@@ -18,6 +19,7 @@
 
 .container h3 {
   color: black;
+  font-family: Poppins;
   font-size: 36.678px;
   font-style: normal;
   font-weight: 300;
