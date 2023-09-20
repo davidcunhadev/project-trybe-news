@@ -28,16 +28,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 O Trybe News é um projeto que visa replicar a ideia de um sistema que captura as notícias mais recentes do IBGE e apresentar elas de forma organizada.
 
 <h3>Funcionalidades:<h3>
-<h4>Permite que o usuário faça buscas as notícias por tipos, que são:<h4>
-<ul>
-  <li>Mais Recentes<li>
-  <li>Notícias<li>
-  <li>Release<li>
-<ul>
+ Permite que o usuário faça buscas as notícias por tipos, que são:
+  - Mais Recentes
+  - Releases
+  - Notícias
 
-<p>
-  <strong>Favoritar as notícias:<strong> Caso o usuário goste de alguma notícia, pode se sentir a vontade para favoritá-la e assegurar de que ela estará sempre ali caso queira vê-la novamente.
-<p>
+- **Favoritar Notícias:** Caso o usuário goste de alguma notícia, pode se sentir a vontade para favoritá-la e assegurar de que ela estará sempre ali caso queira vê-la novamente.z
 
 ## 🔖 Layout
 
