@@ -15,12 +15,13 @@ O Trybe News é um projeto promovido pela Trybe para ensino de tecnologias WEB. 
 
 ## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+Esse projeto foi desenvolvido com as seguintes tecnologias e bibliotecas:
 
 - React
 - TypeScript
 - React Testing Library
 - CSS Modules
+- React Icons
 - Git e Github
 - Figma
 
@@ -35,7 +36,7 @@ O Trybe News é um projeto que visa replicar a ideia de um sistema que captura a
   - Releases
   - Notícias
 
-- **Favoritar Notícias:** Caso o usuário goste de alguma notícia, pode se sentir a vontade para favoritá-la e assegurar de que ela estará sempre ali caso queira vê-la novamente.z
+- **Favoritar Notícias:** Caso o usuário goste de alguma notícia, pode se sentir a vontade para favoritá-la e assegurar de que ela estará sempre ali caso queira vê-la novamente.
 
 ## 🔖 Layout
 
