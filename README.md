@@ -47,75 +47,39 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 
 <h2>Instalação<h2>
 
-<ol>
-  <li>Clone o repositório:<li>
-<ol>
+1. Clone o repositório:
 
-<div>
-  <pre>
-    <code>
-    git@github.com:davidcunhadev/project-trybe-news.git
-    </code>
-  </pre>
-<div>
+```
+ git@github.com:markoclimakodev/trybe-news.git
+```
 
-<ol>
-  <li>Vá para a pasta do projeto:<li>
-<ol>
+2. Vá para a pasta do projeto:
 
-<div>
-  <pre>
-    <code>
-    cd project-trybe-news
-    </code>
-  </pre>
-<div>
+```
+cd project-trybe-news
+```
 
-<ol>
-  <li>Instale as dependências do projeto:<li>
-<ol>
+3. Instale as dependências do projeto:
+```
+npm install
+```
 
-<div>
-  <pre>
-    <code>
-    npm install
-    </code>
-  </pre>
-<div>
-
-<ol>
-  <li>Rode o projeto com o seguinte comando:<li>
-<ol>
-
-<div>
-  <pre>
-    <code>
-    npm run dev
-    </code>
-  </pre>
-<div>
+4. Rode o projeto com o comando:
+```
+npm run dev
+``
 
 ## 🧪 Testes
 
-<h3>Para rodar todos os testes da aplicação execute o comando:<h3>
+Para rodar todos os testes da aplicação execute o comando:
+```
+npm run test
+```
 
-<div>
-  <pre>
-    <code>
-    npm run test
-    </code>
-  </pre>
-<div>
-
-<h3>Para rodar a cobertura de testes da aplicação execute o comando:<h3>
-
-<div>
-  <pre>
-    <code>
-    npm run coverage
-    </code>
-  </pre>
-<div>
+Para rodar a cobertura de testes da aplicação execute o comando:
+```
+npm run coverage
+```
 
 ## 📫 Contato
 
