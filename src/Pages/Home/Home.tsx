@@ -1,7 +1,9 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import Card from '../../Components/Card/Card';
+
 import styles from './Home.module.css';
+
+import Card from '../../Components/Card/Card';
 import NewsContext from '../../Context/NewsContext';
 
 function Home() {
@@ -9,6 +11,7 @@ function Home() {
   const navigate = useNavigate();
   const { newsResults, handleFavoriteNews } = useContext(NewsContext);
 
+  // variável para armazenar apenas os últimos 3 resultados da API //
   const getThreeLatestNews = newsResults.slice(1, 4);
 
   return (
@@ -24,7 +27,7 @@ function Home() {
           ))}
         </div>
         <button
-          onClick={ () => navigate('/release') }
+          onClick={ () => navigate('/news') }
           className={ styles.button }
         >
           MAIS NOTÍCIAS

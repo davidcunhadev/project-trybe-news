@@ -1,7 +1,9 @@
 import { useLocation } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import Card from '../../Components/Card/Card';
+
 import styles from './News.module.css';
+
+import Card from '../../Components/Card/Card';
 import NewsContext from '../../Context/NewsContext';
 
 function News() {
@@ -9,6 +11,8 @@ function News() {
   const { newsResults, handleFavoriteNews } = useContext(NewsContext);
   const [newsLength, setNewsLength] = useState(15);
 
+  // função que faz o incremento de mais 15 notícias para o estado "newsLength", e,
+  // dentro da div ao fazer o slice, passamos o valor atualizado de "newsLength" para fazer o map de mais 15 cards //
   const newsPerPage = () => {
     const fixedIncrement = 15;
     setNewsLength(newsLength + fixedIncrement);

@@ -7,6 +7,7 @@ function NewsProvider({ children }: NewsProviderType) {
   const [releaseResults, setReleaseResults] = useState<ItemsType[]>([]);
   const [favorites, setFavorites] = useState<ItemsType[]>([]);
 
+  // função responsável por favoritar alguma notícia caso o usuário clique no ícone do coracão//
   const handleFavoriteNews = (news: ItemsType) => {
     const alreadyFavorited = favorites.some((fav) => fav.id === news.id);
     if (alreadyFavorited) {

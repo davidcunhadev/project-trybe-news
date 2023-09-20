@@ -1,7 +1,7 @@
 .container {
   display: flex;
   gap: 2.5rem;
-  margin: 1.5rem 16.3rem 0.5rem 12rem;
+  margin: 1rem 16.3rem 0.5rem 12rem;
   background: rgba(255, 255, 255, 0.85);
   padding: 1.25rem 1.25rem 1.25rem 1rem;
 }

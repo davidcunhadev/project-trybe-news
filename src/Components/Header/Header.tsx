@@ -4,7 +4,9 @@ import logo from '../../assets/logo.svg';
 function Header() {
   return (
     <header className={ styles.header }>
-      <img className={ styles.logo } src={ logo } alt="Trybe Logo" />
+      <a href="/">
+        <img className={ styles.logo } src={ logo } alt="Trybe Logo" />
+      </a>
       <h1>TRYBE NEWS</h1>
     </header>
   );

@@ -17,24 +17,35 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .container p:nth-child(2) {
-  color: #2A2A2A;
+  color: #2a2a2a;
   font-size: 0.9375rem;
   font-family: Nunito Sans;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.container p:nth-child(3) {
-  color: #2A2A2A;
+.container button:nth-child(4) {
+  background-color: #fff;
+  border: none;
+  font-size: 1rem;
+  margin: 1rem 0.01rem 1rem 23rem;
+  cursor: pointer;
+}
+
+.date {
+  display: flex;
+  gap: 9.2rem;
+}
+
+.date p {
+  color: #2a2a2a;
   font-size: 0.9375rem;
-  font-weight: 400;
-  margin-right: 10rem;
-}
-
-.container img {
-  margin-top: 1rem;
-  margin-left: 95%;
+  font-weight: 500;
+  white-space: nowrap;
 }

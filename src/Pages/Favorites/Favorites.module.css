@@ -1,9 +1,11 @@
 .container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.container p {
+.noFavorites {
   color: #2a2a2a;
   font-weight: 900;
   font-family: Poppins;

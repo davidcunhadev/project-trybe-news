@@ -1,6 +1,8 @@
 import { useContext } from 'react';
-import styles from './Favorites.module.css';
 import NewsContext from '../../Context/NewsContext';
+
+import styles from './Favorites.module.css';
+
 import Card from '../../Components/Card/Card';
 
 function Favorites() {
@@ -9,7 +11,7 @@ function Favorites() {
   return (
     <section className={ styles.container }>
       {favorites.length === 0 ? (
-        <p>Nenhuma notícia favoritada.</p>
+        <p className={ styles.noFavorites }>Nenhuma notícia favoritada.</p>
       ) : (
         favorites.map((item) => (
           <Card key={ item.id } news={ item } handleFavoriteNews={ handleFavoriteNews } />

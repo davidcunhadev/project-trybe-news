@@ -14,8 +14,10 @@ function Card({ news, handleFavoriteNews }: CardProps) {
       <p className={ styles.description }>
         {news.introducao}
       </p>
-      <p>{publicationDate(news.data_publicacao)}</p>
-      <Button href={ news.link } />
+      <div className={ styles.date }>
+        <p>{publicationDate(news.data_publicacao)}</p>
+        <Button href={ news.link } />
+      </div>
       <button onClick={ () => handleFavoriteNews(news) }>
         {favorites.some((fav) => fav.id === news.id) ? (
           <MdFavorite />
