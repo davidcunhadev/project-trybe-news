@@ -64,7 +64,7 @@ npm install
 4. Rode o projeto com o comando:
 ```
 npm run dev
-``
+```
 
 ## 🧪 Testes
 
