@@ -29,7 +29,7 @@ O Trybe News é um projeto que visa replicar a ideia de um sistema que captura a
 
 ## Funcionalidades
 
--Permite que o usuário faça buscas as notícias por tipos, que são:
+- Permite que o usuário faça buscas as notícias por tipos, que são:
   - Mais Recentes
   - Releases
   - Notícias
@@ -47,7 +47,7 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 1. Clone o repositório:
 
 ```
- git@github.com:markoclimakodev/trybe-news.git
+ git@github.com:davidcunhadev/project-trybe-news.git
 ```
 
 2. Vá para a pasta do projeto:
