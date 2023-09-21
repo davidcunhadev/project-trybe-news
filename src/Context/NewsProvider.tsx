@@ -22,7 +22,7 @@ function NewsProvider({ children }: NewsProviderType) {
   useEffect(() => {
     const alreadyFavorites = () => {
       const hasFavorites = localStorage.getItem('favorites');
-      const favorited = hasFavorites && JSON.parse(hasFavorites);
+      const favorited = hasFavorites ? JSON.parse(hasFavorites) : [];
       setFavorites(favorited);
     };
     alreadyFavorites();
