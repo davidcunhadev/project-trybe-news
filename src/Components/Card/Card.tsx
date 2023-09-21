@@ -19,7 +19,7 @@ function Card({ news, handleFavoriteNews }: CardProps) {
         <Button href={ news.link } />
       </div>
       <button onClick={ () => handleFavoriteNews(news) }>
-        {favorites.some((fav) => fav.id === news.id) ? (
+        {favorites && favorites.some((fav) => fav.id === news.id) ? (
           <MdFavorite />
         ) : (
           <MdFavoriteBorder />

@@ -29,12 +29,12 @@ function LatestNewsCard() {
         <div className={ styles.details }>
           <p className={ styles.fresherNews }>Notícia Mais Recente</p>
           <button
-            className={ favorites.some((fav) => fav.id === latestNews.id)
+            className={ favorites && favorites.some((fav) => fav.id === latestNews.id)
               ? 'favorited' : 'notFavorited' }
             data-testid={ latestNews.id }
             onClick={ () => handleFavoriteNews(latestNews) }
           >
-            {favorites.some((fav) => fav.id === latestNews.id) ? (
+            {favorites && favorites.some((fav) => fav.id === latestNews.id) ? (
               <MdFavorite />
             ) : (
               <MdFavoriteBorder />
