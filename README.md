@@ -83,7 +83,7 @@ npm run coverage
 ## 🚀 Deploy
 
 Para conferir a aplicação rodando acesse este link:
-- [Link](https://project-trybe-news.vercel.app/)
+- [Link](https://project-trybe-news-davidcunhadev.vercel.app/)
 
 ## 📫 Contato
 
