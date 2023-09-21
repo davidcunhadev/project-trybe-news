@@ -80,6 +80,11 @@ Para rodar a cobertura de testes da aplicação execute o comando:
 npm run coverage
 ```
 
+## 🚀 Deploy
+
+Para conferir a aplicação rodando acesse este link:
+- [Link](https://project-trybe-news.vercel.app/)
+
 ## 📫 Contato
 
 Conecte-se comigo no LinkedIn!  <a target='_blank' href="https://www.linkedin.com/in/davidlcunha/">
