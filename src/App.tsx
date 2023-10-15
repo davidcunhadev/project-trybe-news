@@ -12,7 +12,7 @@ function App() {
   return (
     <NewsProvider>
       <Routes>
-        <Route path="/" Component={ Layout }>
+        <Route element={ <Layout /> }>
           <Route path="/" Component={ Home } />
           <Route path="/release" Component={ Release } />
           <Route path="/news" Component={ News } />

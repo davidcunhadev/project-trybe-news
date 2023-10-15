@@ -30,17 +30,9 @@
   margin-bottom: 2rem;
 }
 
-.container button:nth-child(4) {
-  background-color: #fff;
-  border: none;
-  font-size: 1rem;
-  margin: 1rem 0.01rem 1rem 23rem;
-  cursor: pointer;
-}
-
 .date {
   display: flex;
-  gap: 9.2rem;
+  gap: 5rem;
 }
 
 .date p {
@@ -48,4 +40,52 @@
   font-size: 0.9375rem;
   font-weight: 500;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 20rem;
+    height: 25rem;
+    padding: 2.25rem 1.5rem 0.01rem 1.5rem;
+    margin: 2rem 0.01rem;
+  }
+  .container button:nth-child(4) {
+    background-color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .date button {
+    width: 8rem;
+  }
+}
+
+@media screen and (min-width: 431px) {
+  .container {
+    width: 20rem;
+    height: 25rem;
+    padding: 2.25rem 1.5rem 0.01rem 1.5rem;
+    margin: 2rem 0.01rem;
+  }
+  .container button:nth-child(4) {
+    background-color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 20rem;
+    height: 25rem;
+    padding: 2.25rem 1.5rem 0.01rem 1.5rem;
+    margin: 2rem 0.01rem;
+  }
+  .container button:nth-child(4) {
+    background-color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
 }

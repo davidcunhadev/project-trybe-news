@@ -1,3 +1,4 @@
-main {
+body {
+  height: 100vh;
   background: #f1f2f3;
 }
