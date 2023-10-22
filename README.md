@@ -40,6 +40,8 @@ O Trybe News é um projeto que visa replicar a ideia de um sistema que captura a
 
 - **Favoritar Notícias:** Caso o usuário goste de alguma notícia, pode se sentir a vontade para favoritá-la e assegurar de que ela estará sempre ali caso queira vê-la novamente.
 
+- **Responsividade:** O aplicativo conta com completa responsividade para vários dispositivos como smartphones, tablets e desktops.
+
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/KAzG24r3c9QCowMCi1LgTl/News-Website-UI-and-Presentation-for-Opportunists-(Community)?node-id=1%3A359&mode=dev). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
