@@ -113,7 +113,7 @@
 @media screen and (min-width: 1500px) {
   .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: auto;
     height: auto;
   }
