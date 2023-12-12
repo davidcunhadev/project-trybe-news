@@ -41,3 +41,17 @@
     font-size: 0.575rem;
   }
 }
+
+@media screen and (min-width: 1500px) {
+  .button {
+    width: 7rem;
+    height: 2.25rem;
+  }
+  .button a {
+    font-size: 0.575rem;
+  }
+  .button:hover {
+    width: 8rem;
+    height: 3rem;
+  }
+}
